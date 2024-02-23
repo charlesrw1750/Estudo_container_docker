@@ -31,5 +31,8 @@ RUN mvn clean package -Dmaven.compiler.target=1.8 -Dmaven.compiler.source=1.8 -D
 ARG JAR_FILE=target/easy-notes-1.0.0.jar
 RUN cp $JAR_FILE /opt/note/easy-note.jar
 
+# Copia do arquivo applications.properties
+COPY application.properties /opt/note/application.properties
+
 # Comando de execução do JAR
 ENTRYPOINT ["java", "-jar", "/opt/note/easy-note.jar"]
