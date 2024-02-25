@@ -1,0 +1,1 @@
+{"rsync":{"/vagrant":{"type":"rsync","guestpath":"/vagrant","hostpath":"C:/Users/Lenovo/Documents/GitHub/Estudo_container_docker/Estudo_container_docker","disabled":false,"__vagrantfile":true,"owner":"vagrant","group":"vagrant"}}}
