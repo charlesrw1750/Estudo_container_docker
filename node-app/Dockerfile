@@ -5,3 +5,4 @@ RUN npm install
 RUN npm install express
 COPY ./ ./
 CMD ["npm", "start"]
+ENTRYPOINT ["node", "index.js"]
