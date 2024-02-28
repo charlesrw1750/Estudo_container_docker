@@ -9,19 +9,19 @@ const client = redis.createClient({
 
 client.set('visits', 0);
 
-app.get('/', (req, res) => {
-    client.get('visits', (err, visits) => {
+app.get('/', (req, res)=>{
+    client.get('visits', (err, visits)=>{
         if (err) {
             console.error(err);
             return res.status(500).send('Erro ao obter o número de visitas');
         }
 
         visits = parseInt(visits) + 1;
-        res.send('Número de visitas é: ' + visits);
-        client.set('visits', visits.toString());
+        res.send('Número de visitas é:' + visits);
+        client.set('visits', parseInt(visits));
     });
 });
 
-app.listen(8081, () => {
+app.listen(8081, ()=>{
     console.log('Serviço na porta 8081');
 });
